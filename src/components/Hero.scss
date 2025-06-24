@@ -1,0 +1,30 @@
+@use "../assets/styles/variables" as *;
+
+.hero {
+  background-color: transparent;
+  height: calc(100vh - 75px);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position-x: 115%;
+  background-position-y: 23%;
+
+  &__copy {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-family: $secondary;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 2.2rem;
+    letter-spacing: 1.5px;
+    max-width: 800px;
+    text-wrap: balance;
+  }
+}

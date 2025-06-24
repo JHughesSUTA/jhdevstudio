@@ -1,0 +1,60 @@
+@use "./variables" as *;
+@use "./mixins";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*:focus-visible {
+  outline: 4px solid #ff21c0;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: $primary;
+}
+
+button {
+  cursor: pointer;
+}
+
+dialog[open] {
+  max-width: 100%;
+  margin: revert;
+  padding: revert;
+}
+
+::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
