@@ -3,9 +3,6 @@ import backgroundImage from "../assets/images/bitmoji-skating.png";
 import DecryptedText from "./DecryptedText";
 
 const Hero = () => {
-  const paragraph =
-    "Frontend Developer experienced in building responsive, accessible web interfaces using HTML, CSS and JavaScript. known for improving ADA compliance, collaborating closely with designers, and tackling complex, high-priority tasks. Strong focus on clean code, usability, and maintainable solutions.";
-
   return (
     <section
       id="hero"

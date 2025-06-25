@@ -6,13 +6,15 @@
   align-items: center;
   height: 75px;
   font-family: $primary;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
   &__links {
     display: flex;
 
     li {
       list-style-type: none;
-      
+
       a {
         color: black;
         text-decoration: none;

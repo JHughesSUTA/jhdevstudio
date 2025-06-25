@@ -7,7 +7,7 @@ const Nav = () => {
     <>
       <nav id="nav" className="container nav">
         <img src={logo} alt="" width="64px" height="64px" />
-        <ul class="nav__links">
+        <ul className="nav__links">
           <li>
             <a href="">About</a>
           </li>

@@ -48,6 +48,10 @@ dialog[open] {
   padding: revert;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 ::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
