@@ -1,5 +1,5 @@
 @use "./variables" as *;
-@use "./mixins";
+@use "./mixins" as mixins;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* reset */
@@ -36,6 +36,13 @@ select {
 
 body {
   font-family: $primary;
+
+  @include mixins.theme($light-theme); // Default
+
+  // User prefers dark mode
+  @media (prefers-color-scheme: dark) {
+    @include mixins.theme($dark-theme);
+  }
 }
 
 button {

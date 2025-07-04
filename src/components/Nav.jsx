@@ -1,8 +1,9 @@
 import logo from "../assets/images/logo-black.png";
-import { MdDarkMode } from "react-icons/md";
+import { TbMoon, TbMoonStars, TbSunHigh } from "react-icons/tb";
+
 import "./Nav.scss";
 
-const Nav = () => {
+const Nav = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <nav id="nav" className="container nav">
@@ -18,7 +19,13 @@ const Nav = () => {
             <a href="">Contact</a>
           </li>
         </ul>
-        <MdDarkMode size="40px" />
+        <button
+          id="dark-mode-button"
+          className="nav__dark-mode-button"
+          onClick={() => setDarkMode((darkMode) => !darkMode)}
+        >
+          {darkMode ? <TbMoonStars size="25px" /> : <TbSunHigh size="25px" />}
+        </button>
       </nav>
     </>
   );

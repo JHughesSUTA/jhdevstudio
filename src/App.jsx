@@ -1,18 +1,28 @@
+import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import ContactSection from "./components/ContactSection";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ProjectsSection from "./components/ProjectsSection";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", darkMode);
+    document.body.classList.toggle("light", !darkMode);
+  }, [darkMode]);
+
   return (
     <>
-      <Nav />
-      <Hero />
-      <Marquee />
-      <ContactSection />
-      <ToastContainer />
+      {/* <Nav darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+      {/* <Hero /> */}
+      {/* <Marquee /> */}
+      <ProjectsSection />
+      {/* <ContactSection /> */}
+      {/* <ToastContainer /> */}
     </>
   );
 };

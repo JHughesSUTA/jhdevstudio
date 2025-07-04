@@ -1,18 +1,25 @@
 @use "../assets/styles/variables" as *;
+@use "../assets/styles/mixins";
 
 .hero {
-  background-color: transparent;
   height: calc(100vh - 75px);
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position-x: 115%;
-  background-position-y: 23%;
-  
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 
   &__copy {
-    position: relative;
-    top: 40%;
-    transform: translateY(-50%);
+    flex-basis: 685px;
+    flex-shrink: 0;
+  }
+
+  &__side-image {
+    img {
+      min-width: 370px;
+    }
   }
 
   h1 {

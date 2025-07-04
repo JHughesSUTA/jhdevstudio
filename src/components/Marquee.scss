@@ -1,3 +1,6 @@
+@use "../assets/styles/variables" as *;
+@use "../assets/styles/mixins";
+
 .marquee {
   .wrapper {
     width: 90%;

@@ -5,3 +5,14 @@ $secondary: "Montserrat", sans-serif;
 // Palette
 $primary-color: #000;
 $secondary-color: #fff;
+
+
+$light-theme: (
+  primary: #fff,
+  secondary: #000,
+);
+
+$dark-theme: (
+  primary: #000,
+  secondary: #fff,
+);
