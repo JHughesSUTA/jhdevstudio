@@ -6,6 +6,8 @@ import ContactSection from "./components/ContactSection";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProjectsSection from "./components/ProjectsSection";
+import ProjectsSection2 from "./components/ProjectSection-2";
+import TestBlob from "./components/TestBlob";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,12 +19,13 @@ const App = () => {
 
   return (
     <>
-      {/* <Nav darkMode={darkMode} setDarkMode={setDarkMode} /> */}
-      {/* <Hero /> */}
-      {/* <Marquee /> */}
+      <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Hero />
       <ProjectsSection />
-      {/* <ContactSection /> */}
-      {/* <ToastContainer /> */}
+      {/* <ProjectsSection2 /> */}
+      <ContactSection />
+      <ToastContainer />
+      <TestBlob />
     </>
   );
 };

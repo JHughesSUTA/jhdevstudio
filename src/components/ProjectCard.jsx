@@ -11,7 +11,7 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl }) => {
 
       <div className="card__data">
         <div>
-          <h2 className="card__title">{title}</h2>
+          <h3 className="card__title">{title}</h3>
           <span className="card__description">{description}</span>
         </div>
         <div>
