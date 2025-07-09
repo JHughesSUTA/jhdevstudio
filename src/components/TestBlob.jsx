@@ -3,31 +3,24 @@ import { Canvas } from "@react-three/fiber";
 
 const Test3d = () => {
   return (
-    <section
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        // height: "100vh",
-      }}
-    >
+    <>
       <Canvas>
         <mesh>
-          <Sphere args={[1, 100, 200]} scale={2.5}>
+          <Sphere args={[1, 100, 200]} scale={2.4}>
             <MeshDistortMaterial
-              color="#DB8B9B"
+              color="#fafafa"
               attach="material"
               distort={0.5}
-              speed={2}
+              speed={1}
             />
           </Sphere>
           {/* <meshStandardMaterial color="red"/> */}
-          <ambientLight intensity={2} />
+          <ambientLight intensity={7} />
           <directionalLight position={[1, 2, 3]} />
           {/* <OrbitControls enableZoom={false} /> */}
         </mesh>
       </Canvas>
-    </section>
+    </>
   );
 };
 
