@@ -9,6 +9,7 @@ import Marquee from "./Marquee";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import DecryptedText from "./DecryptedText";
 
 const cards = [
   {
@@ -18,6 +19,7 @@ const cards = [
     image: artGalleryImage,
     liveUrl: "https://jhughessuta.github.io/art-gallery-website/",
     githubUrl: "https://github.com/JHughesSUTA/art-gallery-website",
+    tags: ["HTML", "Scss", "JavaScript"],
   },
   {
     title: "Tic Tac Toe",
@@ -25,6 +27,7 @@ const cards = [
     image: ticTacToeImage,
     liveUrl: "https://jhughessuta.github.io/tic-tac-toe-25/",
     githubUrl: "https://github.com/JHughesSUTA/tic-tac-toe-25",
+    tags: ["React", "TypeScript", "Scss"],
   },
   {
     title: "Sunnyside Agency Landing Page",
@@ -33,6 +36,7 @@ const cards = [
     image: sunnysideImage,
     liveUrl: "https://jhughessuta.github.io/sunnyside-agency-landing-page/",
     githubUrl: "https://github.com/JHughesSUTA/sunnyside-agency-landing-page",
+    tags: ["HTML", "Scss", "JavaScript"],
   },
   {
     title: "Students Filter",
@@ -40,6 +44,7 @@ const cards = [
     image: studentFilterImage,
     liveUrl: "https://github.com/JHughesSUTA/demo-students-filter",
     githubUrl: "https://jhughessuta.github.io/demo-students-filter/",
+    tags: ["React", "TypeScript", "Scss"],
   },
 ];
 
@@ -54,14 +59,14 @@ const ProjectsSection = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 950,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 1120,
+        breakpoint: 1366,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -72,7 +77,16 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="projects">
       <div className="container projects-container">
-        <h2>Demo Projects</h2>
+        <h2>
+          <DecryptedText
+            text="Demo Projects"
+            animateOn="view"
+            speed={75}
+            revealDirection="start"
+            max-iterations={10}
+            sequential={true}
+          />
+        </h2>
         <div className="containerz">
           {/* <h2>Projects</h2> */}
           <div
@@ -88,6 +102,7 @@ const ProjectsSection = () => {
                   image={card.image}
                   liveUrl={card.liveUrl}
                   githubUrl={card.githubUrl}
+                  tags={card.tags}
                 />
               ))}
             </Slider>

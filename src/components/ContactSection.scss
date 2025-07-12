@@ -6,23 +6,101 @@
   position: relative;
   // scroll-snap-align: start;
   // scroll-snap-stop: always;
+  background-image: conic-gradient(from 90deg at -10% 100%, #bcc1cd 0deg, #bcc1cd 90deg, #fff 1turn);;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+  }
 
   .form-container {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 50%;
   }
+
   .svg-container {
-    position: absolute;
-    width: 35%;
-    max-width: 685px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10%;
+    width: 40%;
+    margin-left: auto;
+    border-radius: 50% 0;
+    padding: 50px 75px;
+    background-color: #fcfcfc;
+    height: calc(80vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     svg {
       width: 100%;
+    }
+  }
+
+  #contact-form {
+    background-color: #f2f2f2;
+    padding: 50px;
+    border-radius: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #contact-me {
+    .container {
+      gap: 20px;
+      .form-container {
+        flex-basis: 50%;
+        min-width: 450px;
+        flex-shrink: 0;
+
+        #contact-form {
+          padding: 40px;
+          h2 {
+            font-size: 32px;
+          }
+        }
+      }
+
+      .svg-container {
+        margin-left: 20px;
+        padding: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #contact-me {
+    .container {
+      display: block;
+
+      .form-container {
+        width: 100%;
+        min-width: unset;
+
+        #contact-form {
+          margin-top: 50px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 30px !important;
+
+          label {
+            font-size: 14px;
+          }
+
+          h2 {
+            font-size: 28px;
+          }
+        }
+      }
+
+      .svg-container {
+        width: 100%;
+        max-height: 300px;
+        margin-top: 25px;
+
+        svg {
+          max-width: 200px;
+        }
+      }
     }
   }
 }

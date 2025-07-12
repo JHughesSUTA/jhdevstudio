@@ -1,5 +1,7 @@
 import "./ContactForm.scss";
 import { toast } from "react-toastify";
+import DecryptedText from "./DecryptedText";
+import { motion } from "motion/react";
 
 export default function Contact() {
   const onSubmit = async (event) => {
@@ -26,25 +28,65 @@ export default function Contact() {
 
   return (
     <div className="form-container">
-      <h2>Let's keep in touch &#128075;</h2>
       <form id="contact-form" onSubmit={onSubmit}>
-        <div className="form-group">
+        <h2>
+          <span>
+            <DecryptedText
+              text="Lets keep in touch"
+              animateOn="view"
+              speed={75}
+              revealDirection="start"
+              max-iterations={10}
+              sequential={true}
+              // useOriginalCharsOnly={true}
+            />
+          </span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.5 }}
+          >
+            &nbsp;&#128075;
+          </motion.span>
+        </h2>
+
+        <motion.div
+          className="form-group"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
+        >
           <label htmlFor="name">Full name</label>
           <input id="name" type="text" name="name" required />
-        </div>
-        <div className="form-group">
+        </motion.div>
+        <motion.div
+          className="form-group"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <label htmlFor="email">Email address</label>
           <input type="email" name="email" required />
-        </div>
+        </motion.div>
 
-        <div className="form-group">
+        <motion.div
+          className="form-group"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           <label htmlFor="name">Message</label>
           <textarea name="message" required></textarea>
-        </div>
+        </motion.div>
 
-        <div className="form-group">
+        <motion.div
+          className="form-group"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <button type="submit">Send</button>
-        </div>
+        </motion.div>
       </form>
     </div>
   );

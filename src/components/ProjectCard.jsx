@@ -3,8 +3,16 @@
 // import ticTacToeImage from "../assets/images/tictactoe-screenshot.jpg";
 import { IoMdOpen } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import Tag from "./Tag";
 
-const ProjectCard = ({ title, description, image, liveUrl, githubUrl }) => {
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  liveUrl,
+  githubUrl,
+  tags,
+}) => {
   return (
     <article className="card__article">
       <img src={image} alt="image" className="card__img" />
@@ -12,6 +20,9 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl }) => {
       <div className="card__data">
         <div>
           <h3 className="card__title">{title}</h3>
+          {tags.map((tag, index) => (
+            <Tag key={index} text={tag} />
+          ))}
           <span className="card__description">{description}</span>
         </div>
         <div>
