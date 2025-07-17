@@ -1,21 +1,21 @@
-import "./Marquee.scss";
-import htmlIcon from "../assets/images/icons/html.png";
-import javascriptIcon from "../assets/images/icons/javascript.png";
-import cssIcon from "../assets/images/icons/css.png";
-import reactIcon from "../assets/images/icons/react.png";
-import angularIcon from "../assets/images/icons/angular.png";
-import typescriptIcon from "../assets/images/icons/typescript.png";
-import sassIcon from "../assets/images/icons/sass.png";
-import tailwindIcon from "../assets/images/icons/tailwind.png";
-import jestIcon from "../assets/images/icons/jest.png";
-import gitIcon from "../assets/images/icons/git.png";
-import nodeIcon from "../assets/images/icons/node.png";
-import expressIcon from "../assets/images/icons/express.png";
-import mysqlIcon from "../assets/images/icons/mysql.png";
-import postgresIcon from "../assets/images/icons/postgres.png";
-import rubyIcon from "../assets/images/icons/ruby.png";
-import figmaIcon from "../assets/images/icons/figma.png";
-import xdIcon from "../assets/images/icons/xd.png";
+import "./Marquee.scss"
+import htmlIcon from "../../assets/images/icons/html.png";
+import javascriptIcon from "../../assets/images/icons/javascript.png";
+import cssIcon from "../../assets/images/icons/css.png";
+import reactIcon from "../../assets/images/icons/react.png";
+import angularIcon from "../../assets/images/icons/angular.png";
+import typescriptIcon from "../../assets/images/icons/typescript.png";
+import sassIcon from "../../assets/images/icons/sass.png";
+import tailwindIcon from "../../assets/images/icons/tailwind.png";
+import jestIcon from "../../assets/images/icons/jest.png";
+import gitIcon from "../../assets/images/icons/git.png";
+import nodeIcon from "../../assets/images/icons/node.png";
+import expressIcon from "../../assets/images/icons/express.png";
+import mysqlIcon from "../../assets/images/icons/mysql.png";
+import postgresIcon from "../../assets/images/icons/postgres.png";
+import rubyIcon from "../../assets/images/icons/ruby.png";
+import figmaIcon from "../../assets/images/icons/figma.png";
+import xdIcon from "../../assets/images/icons/xd.png";
 
 const Marquee = () => {
   return (

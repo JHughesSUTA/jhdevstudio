@@ -10,9 +10,9 @@
   background-color: white;
   z-index: 100;
   position: relative;
-  // scroll-snap-align: start;
-  // scroll-snap-stop: always;
-  box-shadow: 0px 0px 250px 100px rgba(255,255,255,1);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  // box-shadow: 0px 0px 250px 100px rgba(255,255,255,1);
 
 
   .container {

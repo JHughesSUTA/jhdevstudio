@@ -1,7 +1,11 @@
 import "./ContactForm.scss";
 import { toast } from "react-toastify";
-import DecryptedText from "./DecryptedText";
 import { motion } from "motion/react";
+import SplitText from "./SplitText";
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 export default function Contact() {
   const onSubmit = async (event) => {
@@ -31,23 +35,49 @@ export default function Contact() {
       <form id="contact-form" onSubmit={onSubmit}>
         <h2>
           <span>
-            <DecryptedText
+            <SplitText
               text="Lets keep in touch"
-              animateOn="view"
-              speed={75}
-              revealDirection="start"
-              max-iterations={10}
-              sequential={true}
-              // useOriginalCharsOnly={true}
+              className=""
+              delay={10}
+              duration={2}
+              ease="elastic.out(1,0.3)"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="left"
+              onLetterAnimationComplete={handleAnimationComplete}
             />
           </span>
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.5 }}
+            transition={{ duration: 0.5, delay: 1 }}
           >
             &nbsp;&#128075;
           </motion.span>
+
+          {/* <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            animate={{
+              opacity: 1,
+              rotate: [0, 10, -10, 10, 0],
+            }}
+            transition={{
+              opacity: { duration: 0.5, delay: 1.5 },
+              rotate: {
+                duration: 0.5,
+                delay: 6.5, // Start waving 5 seconds after appearing (1.5 + 5)
+                repeat: Infinity,
+                repeatDelay: 4.5, // 5 seconds total cycle time minus 0.5s animation
+                ease: "easeInOut",
+              },
+            }}
+          >
+            &nbsp;&#128075;
+          </motion.span> */}
         </h2>
 
         <motion.div

@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import HeroTest from "./components/HeroTest"
-import Marquee from "./components/Marquee";
-import ContactSection from "./components/ContactSection";
+import Hero from "./components/HeroSection/Hero";
+import Marquee from "./components/ProjectsSection/Marquee";
+import ContactSection from "./components/ContactSection/ContactSection";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ProjectsSection from "./components/ProjectsSection";
-import ProjectsSection2 from "./components/ProjectSection-2";
-import TestBlob from "./components/TestBlob";
+import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);

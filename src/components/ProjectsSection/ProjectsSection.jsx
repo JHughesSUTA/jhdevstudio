@@ -1,9 +1,9 @@
 // import "./ProjectSection.scss";
-import "./ProjectSection2.scss";
-import artGalleryImage from "../assets/images/art-gallery-screenshot.jpg";
-import sunnysideImage from "../assets/images/sunnyside-screenshot.jpg";
-import ticTacToeImage from "../assets/images/tictactoe-screenshot.jpg";
-import studentFilterImage from "../assets/images/student-filter-screenshot.jpg";
+import "./ProjectSection.scss";
+import artGalleryImage from "../../assets/images/art-gallery-screenshot.jpg";
+import sunnysideImage from "../../assets/images/sunnyside-screenshot.jpg";
+import ticTacToeImage from "../../assets/images/tictactoe-screenshot.jpg";
+import studentFilterImage from "../../assets/images/student-filter-screenshot.jpg";
 import ProjectCard from "./ProjectCard";
 import Marquee from "./Marquee";
 import "slick-carousel/slick/slick.css";

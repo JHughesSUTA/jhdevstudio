@@ -1,3 +1,6 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins";
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
@@ -17,18 +20,29 @@
 
 #projects {
   background-color: white;
+  background-image: conic-gradient(
+    from 90deg at -10% 100%,
+    #bcc1cd 0deg,
+    #bcc1cd 90deg,
+    #fff 1turn
+  );
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
   .projects-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     min-height: 100vh;
   }
 
   h2 {
     display: block;
-    max-width: 90%;
+    // max-width: 90%;
+    text-align: center;
     font-size: 3rem;
+    letter-spacing: 1px;
+    font-family: $secondary;
   }
 
   .slick-prev,
@@ -50,7 +64,8 @@
     display: inline-block;
     border-radius: 10px;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: $secondary;
     & + .tag {
       margin-left: 5px;
     }
@@ -73,7 +88,6 @@
       rgb(206, 244, 255) 55%,
       rgb(227, 255, 192) 100%
     );
-    
 
     .card__article {
       overflow: hidden;
@@ -110,6 +124,11 @@
       flex-direction: column;
       justify-content: space-between;
       min-height: 225px;
+      text-align: left;
+
+      div {
+        text-align: left;
+      }
     }
 
     .card__description {
@@ -126,6 +145,7 @@
       font-weight: 500;
       color: var(--title-color);
       margin-bottom: 5px;
+      font-family: $secondary;
     }
 
     .card__button {
@@ -202,7 +222,6 @@
 @media screen and (max-width: 1550px) {
   #projects {
     .containerz {
-
       .card__article {
         max-width: 350px;
       }
@@ -219,10 +238,100 @@
   }
 }
 
+@media screen and (max-width: 1366px) {
+  #projects {
+    .containerz {
+      max-width: 1000px;
+      padding-left: 10px;
+      padding-right: 10px;
+      .card__article {
+        max-width: 400px;
+      }
+      .card__img {
+        width: 400px;
+        height: 400px;
+      }
+
+      .card__data {
+        width: 350px;
+        left: 25px;
+      }
+
+      .slick-prev {
+        left: -15px;
+      }
+      .slick-next {
+        right: -15px;
+      }
+    }
+  }
+}
+
 // TABLET
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1040px) {
+  #projects {
+    .containerz {
+      max-width: 1000px;
+      .card__article {
+        max-width: 350px;
+      }
+      .card__img {
+        width: 350px;
+        height: 350px;
+      }
+
+      .card__data {
+        width: 330px;
+        left: 10px;
+      }
+
+      .slick-prev {
+        left: -15px;
+      }
+      .slick-next {
+        right: -15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #projects {
+    .containerz {
+      max-width: 600px;
+      .card__article {
+        max-width: 400px;
+      }
+      .card__img {
+        width: 400px;
+        height: 400px;
+      }
+
+      .card__data {
+        width: 350px;
+        left: 25px;
+      }
+    }
+  }
 }
 
 // SMARTPHONE
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 660px) {
+  #projects {
+    .containerz {
+      max-width: 600px;
+      .card__article {
+        max-width: 280px;
+      }
+      .card__img {
+        width: 280px;
+        height: 280px;
+      }
+
+      .card__data {
+        width: 260px;
+        left: 10px;
+      }
+    }
+  }
 }
