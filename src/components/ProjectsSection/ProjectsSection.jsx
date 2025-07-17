@@ -1,4 +1,3 @@
-// import "./ProjectSection.scss";
 import "./ProjectSection.scss";
 import artGalleryImage from "../../assets/images/art-gallery-screenshot.jpg";
 import sunnysideImage from "../../assets/images/sunnyside-screenshot.jpg";

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/HeroSection/Hero";
-import Marquee from "./components/ProjectsSection/Marquee";
 import ContactSection from "./components/ContactSection/ContactSection";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,9 +18,7 @@ const App = () => {
     <>
       <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
-      {/* <HeroTest /> */}
       <ProjectsSection />
-      {/* <ProjectsSection2 /> */}
       <ContactSection />
       <ToastContainer />
     </>

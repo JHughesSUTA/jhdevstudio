@@ -1,6 +1,3 @@
-// import artGalleryImage from "../assets/images/art-gallery-screenshot.jpg";
-// import sunnysideImage from "../assets/images/sunnyside-screenshot.jpg";
-// import ticTacToeImage from "../assets/images/tictactoe-screenshot.jpg";
 import { IoMdOpen } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import Tag from "./Tag";

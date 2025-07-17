@@ -1,6 +1,6 @@
 import "./Nav.scss";
 import logo from "../assets/images/logo-black.png";
-import { TbMoon, TbMoonStars, TbSunHigh } from "react-icons/tb";
+import { TbMoonStars, TbSunHigh } from "react-icons/tb";
 import { motion } from "motion/react";
 
 const Nav = ({ darkMode, setDarkMode }) => {
