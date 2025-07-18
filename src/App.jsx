@@ -5,22 +5,18 @@ import ContactSection from "./components/ContactSection/ContactSection";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    document.body.classList.toggle("dark", darkMode);
-    document.body.classList.toggle("light", !darkMode);
-  }, [darkMode]);
-
   return (
     <>
-      <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Hero />
-      <ProjectsSection />
-      <ContactSection />
-      <ToastContainer />
+      <ThemeProvider>
+        <Nav />
+        <Hero />
+        <ProjectsSection />
+        <ContactSection />
+        <ToastContainer />
+      </ThemeProvider>
     </>
   );
 };

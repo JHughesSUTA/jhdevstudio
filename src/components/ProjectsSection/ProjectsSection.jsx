@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import DecryptedText from "./DecryptedText";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const cards = [
   {
@@ -48,6 +49,8 @@ const cards = [
 ];
 
 const ProjectsSection = () => {
+  const { theme } = useTheme();
+
   var settings = {
     className: "center",
     dots: true,
@@ -74,9 +77,19 @@ const ProjectsSection = () => {
     ],
   };
   return (
-    <section id="projects" className="projects">
+    <section
+      id="projects"
+      className="projects"
+      style={{
+        // backgroundColor: theme === "dark" && "#23272f",
+        backgroundImage:
+          theme === "light"
+            ? "conic-gradient(from 90deg at -10% 100%, #bcc1cd 0deg, #bcc1cd 90deg, #fff 1turn)"
+            : "conic-gradient(from 90deg at -10% 100%, #2b303b 0deg, #2b303b 90deg, #16181d 1turn)",
+      }}
+    >
       <div className="container projects-container">
-        <h2>
+        <h2 style={{ color: theme === "light" ? "#000" : "#fff" }}>
           <DecryptedText
             text="Demo Projects"
             animateOn="view"
@@ -86,7 +99,16 @@ const ProjectsSection = () => {
             sequential={true}
           />
         </h2>
-        <div className="containerz">
+        <div
+          className="containerz"
+          style={{
+            background:
+              theme === "dark"
+                ? "linear-gradient(145deg, rgb(66 44 75) 0%, rgb(22 53 64) 55%, rgb(49 65 1) 100%)"
+                : "linear-gradient(145deg, rgb(240, 221, 255) 0%, rgb(206, 244, 255) 55%, rgb(227, 255, 192) 100%)",
+            borderColor: theme === "dark" && "#777d82",
+          }}
+        >
           {/* <h2>Projects</h2> */}
           <div
             className="card__container"

@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins";
 
-#contact-me {
+#contact {
   height: 100vh;
   position: relative;
   scroll-snap-align: start;
@@ -28,7 +28,7 @@
     width: 40%;
     margin-left: auto;
     border-radius: 50% 0;
-    padding: 50px 75px;
+    // padding: 50px 75px;
     background-color: #fcfcfc;
     height: calc(80vh);
     display: flex;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #contact-me {
+  #contact {
     .container {
       gap: 20px;
       .form-container {
@@ -73,7 +73,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  #contact-me {
+  #contact {
     .container {
       display: block;
 

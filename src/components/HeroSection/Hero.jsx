@@ -2,21 +2,24 @@ import "./Hero.scss";
 import backgroundImage from "../../assets/images/bitmoji-skating.png";
 import { motion } from "motion/react";
 import Particles from "./Particles";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Hero = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       <section
         id="hero"
         className="hero"
-        // style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ backgroundColor: theme === "light" ? "#fff" : "#23272f" }}
       >
-       
         <div className="background-layer">
-         
-
           <Particles
-            particleColors={["#000", "#000"]}
+            key={theme} // Re-mount when theme changes
+            particleColors={
+              theme === "light" ? ["#000", "#000"] : ["#fff", "#fff"]
+            }
             particleCount={500}
             particleSpread={20}
             speed={0.1}
@@ -27,7 +30,13 @@ const Hero = () => {
           />
         </div>
         <div className="container">
-          <div className="hero__copy">
+          <div
+            className="hero__copy"
+            style={{
+              backgroundColor: theme === "light" ? "#fff" : "#23272f",
+              color: theme === "light" ? "#000" : "#fff",
+            }}
+          >
             <h1>
               <motion.span
                 initial={{ opacity: 0 }}
@@ -44,7 +53,7 @@ const Hero = () => {
                 &nbsp;I'm James
               </motion.span>
             </h1>
-       
+
             <motion.p
               initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}

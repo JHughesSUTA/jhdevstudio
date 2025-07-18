@@ -2,12 +2,17 @@ import "./ContactForm.scss";
 import { toast } from "react-toastify";
 import { motion } from "motion/react";
 import SplitText from "./SplitText";
-
-const handleAnimationComplete = () => {
-  console.log("All letters have animated!");
-};
+import { useTheme } from "../../contexts/ThemeContext";
 
 export default function Contact() {
+  const { theme } = useTheme();
+
+  const inputStyle = {
+    color: theme === "light" ? "black" : "white",
+    backgroundColor: theme === "light" ? "white" : "#16181D",
+    border: "none",
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -32,7 +37,14 @@ export default function Contact() {
 
   return (
     <div className="form-container">
-      <form id="contact-form" onSubmit={onSubmit}>
+      <form
+        id="contact-form"
+        style={{
+          color: theme === "light" ? "#000" : "#fff",
+          backgroundColor: theme === "light" ? "blue" : "#22272E",
+        }}
+        onSubmit={onSubmit}
+      >
         <h2>
           <span>
             <SplitText
@@ -47,7 +59,7 @@ export default function Contact() {
               threshold={0.1}
               rootMargin="-100px"
               textAlign="left"
-              onLetterAnimationComplete={handleAnimationComplete}
+              // onLetterAnimationComplete={handleAnimationComplete}
             />
           </span>
           <motion.span
@@ -87,7 +99,13 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0 }}
         >
           <label htmlFor="name">Full name</label>
-          <input id="name" type="text" name="name" required />
+          <input
+            id="name"
+            style={inputStyle}
+            type="text"
+            name="name"
+            required
+          />
         </motion.div>
         <motion.div
           className="form-group"
@@ -96,7 +114,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <label htmlFor="email">Email address</label>
-          <input type="email" name="email" required />
+          <input type="email" style={inputStyle} name="email" required />
         </motion.div>
 
         <motion.div
@@ -106,7 +124,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <label htmlFor="name">Message</label>
-          <textarea name="message" required></textarea>
+          <textarea name="message" style={inputStyle}  required></textarea>
         </motion.div>
 
         <motion.div
