@@ -33,7 +33,7 @@ const Hero = () => {
           <div
             className="hero__copy"
             style={{
-              backgroundColor: theme === "light" ? "#fff" : "#23272f",
+              // backgroundColor: theme === "light" ? "#fff" : "#23272f",
               color: theme === "light" ? "#000" : "#fff",
             }}
           >

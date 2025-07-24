@@ -40,8 +40,8 @@ export default function Contact() {
       <form
         id="contact-form"
         style={{
-          color: theme === "light" ? "#000" : "#fff",
-          backgroundColor: theme === "light" ? "blue" : "#22272E",
+          color: "#fff",
+          backgroundColor: theme === "light" ? "#000" : "#22272E",
         }}
         onSubmit={onSubmit}
       >
@@ -124,7 +124,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <label htmlFor="name">Message</label>
-          <textarea name="message" style={inputStyle}  required></textarea>
+          <textarea name="message" style={inputStyle} required></textarea>
         </motion.div>
 
         <motion.div

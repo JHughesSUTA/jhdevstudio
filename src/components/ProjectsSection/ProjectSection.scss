@@ -26,8 +26,8 @@
     #bcc1cd 90deg,
     #fff 1turn
   );
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  // scroll-snap-align: start;
+  // scroll-snap-stop: always;
 
   .projects-container {
     display: flex;
@@ -40,9 +40,10 @@
     display: block;
     // max-width: 90%;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     letter-spacing: 1px;
     font-family: $secondary;
+    font-weight: 600;
   }
 
   .slick-prev,
@@ -51,12 +52,14 @@
     height: 30px;
   }
 
-  .slick-next:before,
-  .slick-prev:before {
-    font-size: 30px;
-    width: 30px;
-    height: 30px;
-    color: black;
+  .slick-next,
+  .slick-prev {
+    &::before {
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+      color: black;
+    }
   }
 
   .tag {
@@ -219,6 +222,17 @@
   }
 }
 
+.dark {
+  #projects {
+    .slick-prev,
+    .slick-next {
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1550px) {
   #projects {
     .containerz {
@@ -318,6 +332,9 @@
 // SMARTPHONE
 @media screen and (max-width: 660px) {
   #projects {
+    h2 {
+      font-size: 2rem;
+    }
     .containerz {
       max-width: 600px;
       .card__article {
