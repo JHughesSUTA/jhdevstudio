@@ -50,6 +50,10 @@
   .slick-next {
     width: 30px;
     height: 30px;
+
+    &:focus-visible {
+      outline: 4px solid #ff21c0;
+      }
   }
 
   .slick-next,

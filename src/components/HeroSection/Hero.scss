@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     height: 100%;
   }
 
@@ -21,6 +22,7 @@
     // z-index: -1;
   }
 
+
   &__copy {
     // flex-basis: 685px;
     // flex-shrink: 0;
@@ -28,6 +30,22 @@
     width: min(60%, 740px);
     min-width: 580px;
     // outline: 1px solid red;
+
+    ul {
+      list-style: none;
+      display: flex;
+      margin-top: 20px;
+
+      li + li {
+        margin-left: 20px;
+      }
+
+      li {
+        a {
+          display: inline-block;
+        }
+      }
+    }
   }
 
   &__side-image {
@@ -93,6 +111,10 @@
         max-width: 340px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      ul {
+        justify-content: center;
       }
     }
 

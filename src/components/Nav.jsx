@@ -12,6 +12,7 @@ const Nav = () => {
 
   const mobileMenuRef = useRef(null);
   const hamburgerRef = useRef(null);
+  const firstMenuLinkRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -27,6 +28,11 @@ const Nav = () => {
 
     if (isMenuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+
+      // move focus to first nav link after menu open animation
+      setTimeout(() => {
+        firstMenuLinkRef.current?.focus();
+      }, 100);
     }
 
     return () => {
@@ -81,20 +87,34 @@ const Nav = () => {
             initial={{ x: -260 }}
             animate={{ x: isMenuOpen ? 0 : -260 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
+            inert={!isMenuOpen}
           >
             <ul className="nav__links--mobile">
               <li>
-                <a href="#hero" onClick={toggleMenu}>
+                <a
+                  ref={firstMenuLinkRef}
+                  href="#hero"
+                  onClick={toggleMenu}
+                  tabIndex={isMenuOpen ? 0 : -1}
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#projects" onClick={toggleMenu}>
+                <a
+                  href="#projects"
+                  onClick={toggleMenu}
+                  tabIndex={isMenuOpen ? 0 : -1}
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" onClick={toggleMenu}>
+                <a
+                  href="#contact"
+                  onClick={toggleMenu}
+                  tabIndex={isMenuOpen ? 0 : -1}
+                >
                   Contact
                 </a>
               </li>

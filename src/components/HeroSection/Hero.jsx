@@ -3,6 +3,7 @@ import backgroundImage from "../../assets/images/bitmoji-skating.png";
 import { motion } from "motion/react";
 import Particles from "./Particles";
 import { useTheme } from "../../contexts/ThemeContext";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -59,12 +60,37 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1, delay: 1.5 }}
             >
-              Frontend Developer experienced in building responsive, accessible
-              web interfaces using HTML, CSS, and JavaScript. Known for
-              improving ADA compliance, collaborating closely with designers,
-              and tackling complex, high-priority tasks. Strong focus on clean
-              code, usability, and maintainable solutions.
+              I'm a detail-oriented Web Developer with experience building
+              responsive, accessible, and user-friendly web interfaces. Proven
+              ability to collaborate with design and product teams, improve site
+              performance, and solve complex UI problems. Passionate about clean
+              code, accessibility, and continuous improvement.
             </motion.p>
+            <motion.ul
+              initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1, delay: 1.5 }}
+            >
+              <li>
+                <a href="https://github.com/JHughesSUTA" target="_blank">
+                  <FaGithub
+                    color={theme === "light" ? "#000" : "#fff"}
+                    size={40}
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/jhughessuta/"
+                  target="_blank"
+                >
+                  <FaLinkedin
+                    color={theme === "light" ? "#000" : "#fff"}
+                    size={40}
+                  />
+                </a>
+              </li>
+            </motion.ul>
           </div>
           <motion.div
             initial={{ opacity: 0, x: 500 }}

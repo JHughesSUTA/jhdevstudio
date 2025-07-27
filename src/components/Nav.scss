@@ -28,6 +28,12 @@
     align-items: center;
   }
 
+  .hamburger-react {
+    &:focus-visible {
+      outline: 4px solid #ff21c0 !important;
+    }
+  }
+
   &__links--desktop {
     display: flex;
 
