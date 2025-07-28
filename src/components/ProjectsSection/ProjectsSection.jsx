@@ -42,8 +42,8 @@ const cards = [
     title: "Students Filter",
     description: "Demo react app",
     image: studentFilterImage,
-    liveUrl: "https://github.com/JHughesSUTA/demo-students-filter",
-    githubUrl: "https://jhughessuta.github.io/demo-students-filter/",
+    liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
+    githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
     tags: ["React", "TypeScript", "Scss"],
   },
 ];

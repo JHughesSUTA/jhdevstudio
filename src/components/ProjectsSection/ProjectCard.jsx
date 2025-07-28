@@ -1,6 +1,7 @@
 import { IoMdOpen } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import Tag from "./Tag";
+import { useEffect, useRef } from "react";
 
 const ProjectCard = ({
   title,
@@ -10,8 +11,22 @@ const ProjectCard = ({
   githubUrl,
   tags,
 }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    // Check if this card is in a cloned slide
+    const isCloned = cardRef.current?.closest(".slick-cloned");
+
+    if (isCloned) {
+      // Remove from tab order if it's a cloned slide
+      const buttons = cardRef.current.querySelectorAll(".card__button");
+      buttons.forEach((button) => {
+        button.setAttribute("tabindex", "-1");
+      });
+    }
+  }, []);
   return (
-    <article className="card__article">
+    <article ref={cardRef} className="card__article">
       <img src={image} alt="image" className="card__img" />
 
       <div className="card__data">

@@ -53,7 +53,7 @@
 
     &:focus-visible {
       outline: 4px solid #ff21c0;
-      }
+    }
   }
 
   .slick-next,
@@ -154,6 +154,7 @@
       margin-bottom: 5px;
       font-family: $secondary;
     }
+    
 
     .card__button {
       text-decoration: none;
@@ -165,24 +166,32 @@
       & + .card__button {
         margin-left: 10px;
       }
+
+      // Add focus styles for the buttons
+      &:focus-visible {
+        outline: 4px solid #ff21c0;
+        outline-offset: 2px;
+      }
     }
 
     /* Naming animations in hover */
-    .card__article:hover .card__data {
+    .card__article:hover .card__data,
+    .card__article:focus-within .card__data {
       animation: show-data 1s forwards;
       opacity: 1;
       transition: opacity 0.3s;
     }
 
-    .card__article:hover {
+    .card__article:hover,
+    .card__article:focus-within {
       animation: remove-overflow 2s forwards;
     }
 
-    .card__article:not(:hover) {
+    .card__article:not(:hover):not(:focus-within) {
       animation: show-overflow 2s forwards;
     }
 
-    .card__article:not(:hover) .card__data {
+    .card__article:not(:hover):not(:focus-within) .card__data {
       animation: remove-data 1s forwards;
     }
 
