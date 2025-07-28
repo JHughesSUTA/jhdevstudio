@@ -20,7 +20,7 @@
   outline: 4px solid #ff21c0;
 }
 
-html,
+// html,
 body {
   overflow-x: hidden;
 }
@@ -63,6 +63,8 @@ dialog[open] {
 
 html {
   scroll-snap-type: y mandatory;
+  // height: 100vh;
+  // overflow-y: auto;
 }
 
 ::backdrop {

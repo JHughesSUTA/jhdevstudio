@@ -10,6 +10,8 @@
   background-color: white;
   z-index: 100;
   position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 
   #mobile-menu {
     &.mobile-menu--closed {
@@ -19,6 +21,26 @@
 
     &.mobile-menu--open {
       display: block;
+    }
+
+    .nav__links--mobile {
+      a {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background-color: #fff;
+          transition: all 0.5s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
     }
   }
 

@@ -100,7 +100,7 @@ const ProjectsSection = () => {
           />
         </h2>
         <div
-          className="containerz"
+          className="carousel-container"
           style={{
             background:
               theme === "dark"
@@ -130,7 +130,10 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <Marquee />
+        <div>
+          <h3 style={{ color: theme === "light" ? "#000" : "#fff"}}>My Toolset:</h3>
+          <Marquee />
+        </div>
       </div>
     </section>
   );

@@ -73,57 +73,6 @@ const Marquee = () => {
           <img src={xdIcon} alt="Adobe XD" width="40" height="40" />
         </div>
       </div>
-
-      {/* <div className="wrapper">
-        <div className="itemRight item1">
-          <img src={htmlIcon} alt="HTML" width="40" height="40" />
-        </div>
-        <div className="itemRight item2">
-          <img src={javascriptIcon} alt="JavaScript" width="40" height="40" />
-        </div>
-        <div className="itemRight item3">
-          <img src={cssIcon} alt="CSS" width="40" height="40" />
-        </div>
-        <div className="itemRight item4">
-          <img src={reactIcon} alt="React.js" width="40" height="40" />
-        </div>
-        <div className="itemRight item5">
-          <img src={typescriptIcon} alt="TypeScript" width="40" height="40" />
-        </div>
-        <div className="itemRight item6">
-          <img src={sassIcon} alt="SASS" width="40" height="40" />
-        </div>
-        <div className="itemRight item7">
-          <img src={tailwindIcon} alt="Tailwind" width="40" height="40" />
-        </div>
-        <div className="itemRight item8">
-          <img src={jestIcon} alt="Jest" width="40" height="40" />
-        </div>
-        <div className="itemRight item9">
-          <img src={gitIcon} alt="Git" width="40" height="40" />
-        </div>
-        <div className="itemRight item10">
-          <img src={nodeIcon} alt="Node.js" width="40" height="40" />
-        </div>
-        <div className="itemRight item11">
-          <img src={expressIcon} alt="Express" width="40" height="40" />
-        </div>
-        <div className="itemRight item12">
-          <img src={mysqlIcon} alt="Adobe" width="40" height="40" />
-        </div>
-        <div className="itemRight item13">
-          <img src={postgresIcon} alt="PostgreSQL" width="40" height="40" />
-        </div>
-        <div className="itemRight item14">
-          <img src={rubyIcon} alt="Ruby" width="40" height="40" />
-        </div>
-        <div className="itemRight item15">
-          <img src={figmaIcon} alt="Figma" width="40" height="40" />
-        </div>
-        <div className="itemRight item16">
-          <img src={xdIcon} alt="Adobe XD" width="40" height="40" />
-        </div>
-      </div> */}
     </div>
   );
 };

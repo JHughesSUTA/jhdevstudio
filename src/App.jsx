@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <ProjectsSection />
         <ContactSection />
         <ToastContainer />
+        <Footer />
       </ThemeProvider>
     </>
   );

@@ -48,7 +48,7 @@ export default function Contact() {
         <h2>
           <span>
             <SplitText
-              text="Lets keep in touch"
+              text="Lets keep in touch &nbsp;&#128075;"
               className=""
               delay={10}
               duration={2}
@@ -62,34 +62,6 @@ export default function Contact() {
               // onLetterAnimationComplete={handleAnimationComplete}
             />
           </span>
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            &nbsp;&#128075;
-          </motion.span>
-
-          {/* <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            animate={{
-              opacity: 1,
-              rotate: [0, 10, -10, 10, 0],
-            }}
-            transition={{
-              opacity: { duration: 0.5, delay: 1.5 },
-              rotate: {
-                duration: 0.5,
-                delay: 6.5, // Start waving 5 seconds after appearing (1.5 + 5)
-                repeat: Infinity,
-                repeatDelay: 4.5, // 5 seconds total cycle time minus 0.5s animation
-                ease: "easeInOut",
-              },
-            }}
-          >
-            &nbsp;&#128075;
-          </motion.span> */}
         </h2>
 
         <motion.div
@@ -97,6 +69,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
+          viewport={{ once: true }}
         >
           <label htmlFor="name">Full name</label>
           <input
@@ -112,6 +85,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           <label htmlFor="email">Email address</label>
           <input type="email" style={inputStyle} name="email" required />
@@ -122,6 +96,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
         >
           <label htmlFor="name">Message</label>
           <textarea name="message" style={inputStyle} required></textarea>
@@ -132,6 +107,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
         >
           <button type="submit">Send</button>
         </motion.div>
