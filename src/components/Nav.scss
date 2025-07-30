@@ -26,6 +26,7 @@
     .nav__links--mobile {
       a {
         position: relative;
+        
         &::before {
           content: "";
           position: absolute;

@@ -23,12 +23,8 @@
   }
 
   &__copy {
-    // flex-basis: 685px;
-    // flex-shrink: 0;
-
     width: min(60%, 740px);
     min-width: 580px;
-    // outline: 1px solid red;
 
     ul {
       list-style: none;

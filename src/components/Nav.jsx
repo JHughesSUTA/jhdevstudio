@@ -29,7 +29,6 @@ const Nav = () => {
     if (isMenuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
 
-      // move focus to first nav link after menu open animation
       setTimeout(() => {
         firstMenuLinkRef.current?.focus();
       }, 100);
@@ -44,15 +43,20 @@ const Nav = () => {
     color: theme === "light" ? "#000" : "#fff",
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const handleMobileLinkClick = (e, targetId) => {
+    e.preventDefault();
 
-  const handleMobileLinkClick = (e) => {
-    // necessary in order for mobile nav links to work
+    setIsMenuOpen(false);
+
     setTimeout(() => {
-      setIsMenuOpen(false);
-    }, 100);
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 300);
   };
 
   return (
@@ -108,7 +112,7 @@ const Nav = () => {
                 <a
                   ref={firstMenuLinkRef}
                   href="#hero"
-                  onClick={handleMobileLinkClick}
+                  onClick={(e) => handleMobileLinkClick(e, "hero")}
                   tabIndex={isMenuOpen ? 0 : -1}
                 >
                   About
@@ -117,7 +121,7 @@ const Nav = () => {
               <li>
                 <a
                   href="#projects"
-                  onClick={handleMobileLinkClick}
+                  onClick={(e) => handleMobileLinkClick(e, "projects")}
                   tabIndex={isMenuOpen ? 0 : -1}
                 >
                   Projects
@@ -126,7 +130,7 @@ const Nav = () => {
               <li>
                 <a
                   href="#contact"
-                  onClick={handleMobileLinkClick}
+                  onClick={(e) => handleMobileLinkClick(e, "contact")}
                   tabIndex={isMenuOpen ? 0 : -1}
                 >
                   Contact
