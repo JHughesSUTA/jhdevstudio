@@ -78,12 +78,14 @@ const ProjectCard = ({
       <div className="card__data">
         <div>
           <h3 className="card__title">{title}</h3>
-          {tags.map((tag, index) => (
-            <Tag key={index} text={tag} />
-          ))}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "5px" }}>
+            {tags.map((tag, index) => (
+              <Tag key={index} text={tag} />
+            ))}
+          </div>
           <span className="card__description">{description}</span>
         </div>
-        <div>
+        <div style={{ display: "flex" }}>
           <a href={liveUrl} className="card__button" target="_blank">
             <IoMdOpen size="30px" />
           </a>

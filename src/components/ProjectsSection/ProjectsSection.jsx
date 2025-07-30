@@ -18,7 +18,7 @@ const cards = [
     image: ticTacToeImage,
     liveUrl: "https://jhughessuta.github.io/tic-tac-toe-25/",
     githubUrl: "https://github.com/JHughesSUTA/tic-tac-toe-25",
-    tags: ["React", "TypeScript", "Scss"],
+    tags: ["React", "TypeScript", "Scss", "test", "test"],
   },
   {
     title: "Modern Art Gallery Website",

@@ -9,6 +9,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Footer from "./components/Footer";
 
 const App = () => {
+  
   return (
     <div className="app-wrapper">
       <ThemeProvider>
