@@ -85,10 +85,10 @@ const ProjectCard = ({
         </div>
         <div>
           <a href={liveUrl} className="card__button" target="_blank">
-            <IoMdOpen size="25px" />
+            <IoMdOpen size="30px" />
           </a>
           <a href={githubUrl} className="card__button" target="_blank">
-            <FaGithub size="25px" />
+            <FaGithub size="30px" />
           </a>
         </div>
       </div>

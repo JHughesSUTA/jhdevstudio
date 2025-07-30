@@ -13,34 +13,34 @@ import { useTheme } from "../../contexts/ThemeContext";
 
 const cards = [
   {
-    title: "Modern Art Gallery Website",
-    description:
-      "Challenge from Frontend Mentor. Built with HTML, JavaScript and Sass",
-    image: artGalleryImage,
-    liveUrl: "https://jhughessuta.github.io/art-gallery-website/",
-    githubUrl: "https://github.com/JHughesSUTA/art-gallery-website",
-    tags: ["HTML", "Scss", "JavaScript"],
-  },
-  {
-    title: "Tic Tac Toe",
-    description: "Tic Tac Toe game built with React, TypeScript, Sass",
+    title: "Tic-Tac-Toe",
+    description: "Pick your mark and keep score vs the CPU or another player.",
     image: ticTacToeImage,
     liveUrl: "https://jhughessuta.github.io/tic-tac-toe-25/",
     githubUrl: "https://github.com/JHughesSUTA/tic-tac-toe-25",
     tags: ["React", "TypeScript", "Scss"],
   },
   {
+    title: "Modern Art Gallery Website",
+    description: "Design from frontendmentor.io. Built using CSS grid.",
+    image: artGalleryImage,
+    liveUrl: "https://jhughessuta.github.io/art-gallery-website/",
+    githubUrl: "https://github.com/JHughesSUTA/art-gallery-website",
+    tags: ["HTML", "Scss", "JavaScript"],
+  },
+  {
     title: "Sunnyside Agency Landing Page",
     description:
-      "Demo website built with vanilla JS, CSS, and HTML. Designs from Frontend Mentor",
+      "Design from frontendmentor.io. Animations on scroll using only CSS and minimal JS.",
     image: sunnysideImage,
     liveUrl: "https://jhughessuta.github.io/sunnyside-agency-landing-page/",
     githubUrl: "https://github.com/JHughesSUTA/sunnyside-agency-landing-page",
     tags: ["HTML", "Scss", "JavaScript"],
   },
   {
-    title: "Students Filter",
-    description: "Demo react app",
+    title: "Student Grades",
+    description:
+      "Filter through students and see their grade info. Add a custom tags.",
     image: studentFilterImage,
     liveUrl: "https://jhughessuta.github.io/demo-students-filter/",
     githubUrl: "https://github.com/JHughesSUTA/demo-students-filter",
@@ -131,7 +131,9 @@ const ProjectsSection = () => {
         </div>
 
         <div>
-          <h3 style={{ color: theme === "light" ? "#000" : "#fff"}}>My Toolset:</h3>
+          <h3 style={{ color: theme === "light" ? "#000" : "#fff" }}>
+            My Toolset:
+          </h3>
           <Marquee />
         </div>
       </div>

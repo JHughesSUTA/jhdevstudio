@@ -156,14 +156,20 @@
       margin-bottom: 0.25rem;
       color: #59636e;
       margin-top: 15px;
+      font-family: $secondary;
     }
 
     .card__title {
       font-size: 20px;
+      text-align: left;
       font-weight: 500;
       color: var(--title-color);
       margin-bottom: 5px;
       font-family: $secondary;
+      white-space: nowrap;
+      white-space: nowrap; /* Prevents text from wrapping to a new line */
+      overflow: hidden; /* Hides any overflowing content */
+      text-overflow: ellipsis;
     }
 
     .card__button {
@@ -177,10 +183,13 @@
         margin-left: 10px;
       }
 
-      // Add focus styles for the buttons
       &:focus-visible {
         outline: 4px solid #ff21c0;
         outline-offset: 2px;
+      }
+
+      &:hover {
+        opacity: 0.75;
       }
     }
 
@@ -371,6 +380,8 @@
       .card__data {
         width: 260px;
         left: 10px;
+        padding: 1rem 1.5rem;
+        text-wrap: balance;
       }
     }
   }

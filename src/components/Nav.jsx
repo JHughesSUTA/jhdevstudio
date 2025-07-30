@@ -48,21 +48,35 @@ const Nav = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMobileLinkClick = (e) => {
+    // necessary in order for mobile nav links to work
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 100);
+  };
+
   return (
     <>
-      <motion.nav
+      <nav
         id="nav"
         className="nav nav--desktop"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2.5 }}
         style={{ backgroundColor: theme === "light" ? "#fff" : "#23272f" }}
       >
         <div className="container">
-          <div style={{ maxWidth: "64px" }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.5 }}
+            style={{ maxWidth: "64px" }}
+          >
             <Logo />
-          </div>
-          <ul className="nav__links--desktop">
+          </motion.div>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.5 }}
+            className="nav__links--desktop"
+          >
             <li>
               <a style={navLinkStyle} href="#hero">
                 About
@@ -78,7 +92,7 @@ const Nav = () => {
                 Contact
               </a>
             </li>
-          </ul>
+          </motion.ul>
 
           <motion.div
             id="mobile-menu"
@@ -94,7 +108,7 @@ const Nav = () => {
                 <a
                   ref={firstMenuLinkRef}
                   href="#hero"
-                  onClick={toggleMenu}
+                  onClick={handleMobileLinkClick}
                   tabIndex={isMenuOpen ? 0 : -1}
                 >
                   About
@@ -103,7 +117,7 @@ const Nav = () => {
               <li>
                 <a
                   href="#projects"
-                  onClick={toggleMenu}
+                  onClick={handleMobileLinkClick}
                   tabIndex={isMenuOpen ? 0 : -1}
                 >
                   Projects
@@ -112,7 +126,7 @@ const Nav = () => {
               <li>
                 <a
                   href="#contact"
-                  onClick={toggleMenu}
+                  onClick={handleMobileLinkClick}
                   tabIndex={isMenuOpen ? 0 : -1}
                 >
                   Contact
@@ -120,7 +134,12 @@ const Nav = () => {
               </li>
             </ul>
           </motion.div>
-          <div className="nav__right">
+          <motion.div
+            className="nav__right"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.5 }}
+          >
             <button
               id="dark-mode-button"
               className="nav__dark-mode-button"
@@ -139,14 +158,10 @@ const Nav = () => {
                 toggle={setIsMenuOpen}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.nav>
+      </nav>
     </>
-
-    // <nav>
-
-    // </nav>
   );
 };
 

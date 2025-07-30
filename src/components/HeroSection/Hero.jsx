@@ -1,5 +1,7 @@
 import "./Hero.scss";
-import backgroundImage from "../../assets/images/bitmoji-skating.png";
+import sideImageDesktop from "../../assets/images/bitmoji-dt.png";
+import sideImageMobile from "../../assets/images/bitmoji-mb.png";
+
 import { motion } from "motion/react";
 import Particles from "./Particles";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -92,14 +94,22 @@ const Hero = () => {
               </li>
             </motion.ul>
           </div>
-          <motion.div
+          {/* <motion.div
+            initial={{ opacity: 0, x: 500 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="hero__side-image"
+          > */}
+          <motion.picture
             initial={{ opacity: 0, x: 500 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="hero__side-image"
           >
-            <img src={backgroundImage} alt="" />
-          </motion.div>
+            <source srcset={sideImageDesktop} media="(min-width: 768px)" />
+            <img src={sideImageMobile} alt="" />
+          </motion.picture>
+          {/* </motion.div> */}
         </div>
       </section>
     </>
